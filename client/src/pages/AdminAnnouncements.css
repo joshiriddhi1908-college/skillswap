@@ -1,0 +1,445 @@
+/* =========================================================
+   SKILLSWAP - ADMIN ANNOUNCEMENTS
+   WARM WHITE / NAVY / TEAL THEME
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.admin-announcement {
+  width: 92%;
+  max-width: 1050px;
+  min-height: calc(100vh - 150px);
+  margin: 0 auto;
+  padding: 45px 0 90px;
+
+  color: #263238;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.admin-announcement-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.admin-announcement-header h1 {
+  margin: 0 0 10px;
+
+  color: #243447;
+
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.admin-announcement-header p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   MAIN CARD
+   ========================================================= */
+
+.announcement-card {
+  width: 100%;
+  padding: 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3ded5;
+  border-radius: 20px;
+
+  box-shadow:
+    0 15px 40px rgba(36, 52, 71, 0.10);
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.announcement-card form {
+  display: flex;
+  flex-direction: column;
+
+  padding: 24px;
+
+  background: #f7f5f0;
+
+  border: 1px solid #e3ded5;
+  border-radius: 15px;
+}
+
+.announcement-card form label {
+  margin-bottom: 8px;
+
+  color: #263238;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.announcement-card form input,
+.announcement-card form textarea {
+  width: 100%;
+  margin-bottom: 19px;
+  padding: 13px 14px;
+
+  border: 1px solid #d8d3ca;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #263238;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  outline: none;
+
+  transition: 0.2s ease;
+}
+
+.announcement-card form input {
+  min-height: 46px;
+}
+
+.announcement-card form textarea {
+  min-height: 100px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.announcement-card form input::placeholder,
+.announcement-card form textarea::placeholder {
+  color: #9ca3af;
+}
+
+.announcement-card form input:focus,
+.announcement-card form textarea:focus {
+  border-color: #3b7a78;
+
+  box-shadow:
+    0 0 0 3px rgba(59, 122, 120, 0.12);
+}
+
+
+/* =========================================================
+   PUBLISH BUTTON
+   ========================================================= */
+
+.announcement-card form button {
+  width: 100%;
+  min-height: 47px;
+
+  padding: 0 20px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #3b7a78;
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.announcement-card form button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  background: #2f6563;
+
+  box-shadow:
+    0 10px 25px rgba(59, 122, 120, 0.20);
+}
+
+.announcement-card form button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   PREVIOUS ANNOUNCEMENTS
+   ========================================================= */
+
+.previous-announcements {
+  margin-top: 32px;
+}
+
+.previous-announcements h2 {
+  margin: 0 0 18px;
+
+  color: #243447;
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   LIST
+   ========================================================= */
+
+.announcement-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+
+/* =========================================================
+   ITEM
+   ========================================================= */
+
+.announcement-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3ded5;
+  border-radius: 14px;
+
+  transition: 0.2s ease;
+}
+
+.announcement-item:hover {
+  transform: translateY(-2px);
+
+  border-color: #c9dfdc;
+
+  box-shadow:
+    0 8px 22px rgba(36, 52, 71, 0.09);
+}
+
+.announcement-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.announcement-item-content h3 {
+  margin: 0 0 9px;
+
+  color: #243447;
+
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.4;
+
+  overflow-wrap: anywhere;
+}
+
+.announcement-item-content p {
+  margin: 0 0 12px;
+
+  color: #6b7280;
+
+  font-size: 13px;
+  line-height: 1.65;
+
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.announcement-item-content small {
+  display: block;
+
+  color: #8a9296;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   DELETE BUTTON
+   ========================================================= */
+
+.delete-announcement-btn {
+  flex-shrink: 0;
+
+  min-width: 92px;
+  min-height: 38px;
+
+  padding: 0 13px;
+
+  border: 1px solid #e5c8c8;
+  border-radius: 8px;
+
+  background: #f8eeee;
+
+  color: #b85c5c;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.delete-announcement-btn:hover:not(:disabled) {
+  background: #f3dfdf;
+
+  border-color: #d8aaaa;
+
+  color: #9f4d4d;
+}
+
+.delete-announcement-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   EMPTY / LOADING
+   ========================================================= */
+
+.announcement-empty {
+  min-height: 130px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 25px;
+
+  background: #f7f5f0;
+
+  border: 1px dashed #d8d3ca;
+  border-radius: 12px;
+
+  color: #6b7280;
+
+  font-size: 13px;
+  text-align: center;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 750px) {
+  .admin-announcement {
+    width: 94%;
+    padding: 35px 0 75px;
+  }
+
+  .admin-announcement-header h1 {
+    font-size: 29px;
+  }
+
+  .announcement-card {
+    padding: 22px;
+  }
+
+  .announcement-item {
+    flex-direction: column;
+  }
+
+  .delete-announcement-btn {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 550px) {
+  .admin-announcement {
+    width: 94%;
+    padding: 28px 0 60px;
+  }
+
+  .admin-announcement-header h1 {
+    font-size: 24px;
+  }
+
+  .admin-announcement-header p {
+    font-size: 12px;
+  }
+
+  .announcement-card {
+    padding: 15px;
+    border-radius: 16px;
+  }
+
+  .announcement-card form {
+    padding: 17px;
+  }
+
+  .announcement-card form input,
+  .announcement-card form textarea {
+    font-size: 12px;
+  }
+
+  .previous-announcements {
+    margin-top: 25px;
+  }
+
+  .previous-announcements h2 {
+    font-size: 18px;
+  }
+
+  .announcement-item {
+    padding: 16px;
+  }
+
+  .announcement-item-content h3 {
+    font-size: 16px;
+  }
+
+  .announcement-item-content p {
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .admin-announcement-header h1 {
+    font-size: 21px;
+  }
+
+  .announcement-card {
+    padding: 12px;
+  }
+
+  .announcement-card form {
+    padding: 14px;
+  }
+
+  .announcement-item {
+    padding: 14px;
+  }
+}

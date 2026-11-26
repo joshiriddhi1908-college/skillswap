@@ -1,0 +1,397 @@
+/* =========================================================
+   SKILL CARD - WARM WHITE / NAVY / TEAL THEME
+========================================================= */
+
+.skill-card {
+  width: 100% !important;
+  min-height: 0 !important;
+
+  padding: 18px 22px !important;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+
+  background: #ffffff !important;
+
+  border: 1px solid #e3ded5 !important;
+
+  border-radius: 16px;
+
+  color: #263238 !important;
+
+  box-shadow: 0 7px 20px rgba(36, 52, 71, 0.08);
+
+  transition: 0.25s ease;
+}
+
+.skill-card:hover {
+  border-color: #b8d1ce !important;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(36, 52, 71, 0.12);
+}
+
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.skill-card-profile {
+  width: 220px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  color: #263238 !important;
+}
+
+
+/* =========================================================
+   AVATAR
+========================================================= */
+
+.profile-avatar {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e7f1ef;
+
+  border-radius: 50%;
+
+  color: #3b7a78 !important;
+
+  font-size: 20px;
+  font-weight: 800;
+
+  border: 1px solid #c9dfdc;
+}
+
+
+/* =========================================================
+   PROFILE INFO
+========================================================= */
+
+.profile-info {
+  min-width: 0;
+}
+
+.profile-info h3 {
+  margin: 0 0 4px;
+
+  color: #243447 !important;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profile-info span {
+  display: block;
+
+  color: #6b7280 !important;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   SKILL CONTENT
+========================================================= */
+
+.skill-card-content {
+  flex: 1;
+
+  min-width: 0;
+
+  color: #263238 !important;
+}
+
+.skill-card-content h2 {
+  margin: 0 0 8px;
+
+  color: #243447 !important;
+
+  font-size: 22px;
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   TAGS
+========================================================= */
+
+.skill-tags {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-bottom: 7px;
+}
+
+.skill-category,
+.skill-level {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 5px 11px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  color: #243447 !important;
+}
+
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+
+.skill-category {
+  background: #e7f1ef !important;
+
+  border: 1px solid #c9dfdc;
+}
+
+
+/* =========================================================
+   LEVEL
+========================================================= */
+
+.skill-level {
+  background: #f0f3f2 !important;
+
+  border: 1px solid #d8e0de;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.skill-description {
+  margin: 7px 0 0;
+
+  color: #6b7280 !important;
+
+  font-size: 13px;
+
+  line-height: 1.45;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   ACTION
+========================================================= */
+
+.skill-card-action {
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   REQUEST BUTTON
+========================================================= */
+
+.request-skill-btn {
+  width: 105px;
+  height: 42px;
+
+  padding: 0 16px;
+
+  background: #3b7a78 !important;
+
+  border: none !important;
+
+  border-radius: 9px;
+
+  color: #ffffff !important;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 14px rgba(59, 122, 120, 0.18);
+
+  transition: 0.2s ease;
+}
+
+.request-skill-btn:hover {
+  background: #2f6563 !important;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 18px rgba(59, 122, 120, 0.24);
+}
+
+
+/* =========================================================
+   FORCE NAVY / TEAL TEXT
+========================================================= */
+
+.skill-card h1,
+.skill-card h2,
+.skill-card h3,
+.skill-card p,
+.skill-card span,
+.skill-card strong,
+.skill-card div {
+  color: #263238;
+}
+
+
+/* Keep button text white */
+
+.skill-card .request-skill-btn {
+  color: #ffffff !important;
+}
+
+
+/* Keep category / level colors */
+
+.skill-card .skill-category {
+  color: #3b7a78 !important;
+}
+
+.skill-card .skill-level {
+  color: #243447 !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .skill-card {
+    gap: 15px;
+
+    padding: 16px 18px !important;
+  }
+
+  .skill-card-profile {
+    width: 180px;
+  }
+
+  .profile-avatar {
+    width: 42px;
+    height: 42px;
+
+    font-size: 17px;
+  }
+
+  .skill-card-content h2 {
+    font-size: 19px;
+  }
+
+  .request-skill-btn {
+    width: 95px;
+  }
+}
+
+
+@media (max-width: 650px) {
+
+  .skill-card {
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    gap: 12px;
+
+    padding: 17px !important;
+  }
+
+  .skill-card-profile {
+    width: auto;
+
+    grid-column: 1 / -1;
+  }
+
+  .skill-card-content {
+    grid-column: 1;
+  }
+
+  .skill-card-action {
+    grid-column: 2;
+
+    align-self: end;
+  }
+
+  .skill-card-content h2 {
+    font-size: 18px;
+  }
+
+  .skill-description {
+    font-size: 12px;
+  }
+
+  .request-skill-btn {
+    width: 90px;
+    height: 39px;
+  }
+}
+
+
+@media (max-width: 450px) {
+
+  .skill-card {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .skill-card-profile {
+    width: 100%;
+  }
+
+  .skill-card-action {
+    width: 100%;
+  }
+
+  .request-skill-btn {
+    width: 100%;
+  }
+}

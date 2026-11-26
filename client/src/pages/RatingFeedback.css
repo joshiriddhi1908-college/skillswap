@@ -1,0 +1,727 @@
+/* =========================================================
+   SKILLSWAP - RATING & FEEDBACK
+   WARM WHITE / NAVY / TEAL PROFESSIONAL THEME
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.rating-page {
+  width: 100%;
+
+  min-height: calc(100vh - 80px);
+
+  padding: 45px 20px 70px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: flex-start;
+
+  background: #f7f5f0;
+
+  color: #263238;
+}
+
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.rating-card {
+  width: min(650px, 94%);
+
+  margin: 10px auto 0;
+
+  padding: 30px 34px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3ded5;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 18px 45px rgba(36, 52, 71, 0.09);
+
+  color: #263238;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.rating-header {
+  text-align: center;
+
+  margin: 0 0 24px;
+}
+
+.rating-header h1 {
+  margin: 0 0 8px;
+
+  color: #243447;
+
+  font-size: 32px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+}
+
+.rating-header p {
+  margin: 0 auto;
+
+  max-width: 480px;
+
+  color: #6b7280;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.rating-message {
+  width: 100%;
+
+  margin: 0 0 18px;
+
+  padding: 10px 13px;
+
+  border-radius: 9px;
+
+  text-align: center;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+.rating-message.success {
+  background: #eaf3ef;
+
+  border: 1px solid #c9ddd3;
+
+  color: #5f8068;
+}
+
+.rating-message.error {
+  background: #f8eeee;
+
+  border: 1px solid #e5c8c8;
+
+  color: #b85c5c;
+}
+
+
+/* =========================================================
+   SKILL / TEACHER INFORMATION
+========================================================= */
+
+.rating-info {
+  width: 100%;
+
+  margin: 0 0 18px;
+
+  padding: 14px 18px;
+
+  background: #f7f5f0;
+
+  border: 1px solid #e3ded5;
+
+  border-radius: 12px;
+}
+
+.rating-info-row {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 8px 0;
+
+  min-height: 20px;
+}
+
+.rating-info-row + .rating-info-row {
+  border-top: 1px solid #e3ded5;
+}
+
+.rating-info-label {
+  flex-shrink: 0;
+
+  color: #6b7280;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.rating-info-value {
+  color: #263238;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  text-align: right;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   RATING SECTION
+========================================================= */
+
+.rating-section {
+  width: 100%;
+
+  margin: 0 0 18px;
+
+  padding: 18px 20px;
+
+  background: #fdfcf9;
+
+  border: 1px solid #e3ded5;
+
+  border-radius: 13px;
+}
+
+
+/* =========================================================
+   RATING LABEL
+========================================================= */
+
+.rating-label {
+  display: block;
+
+  margin: 0 0 10px;
+
+  color: #243447;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  line-height: 1.3;
+}
+
+
+/* =========================================================
+   STARS
+========================================================= */
+
+.stars-container {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  width: 100%;
+
+  min-height: 43px;
+}
+
+.star-button {
+  width: 42px;
+
+  height: 42px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #cbd2d0;
+
+  font-size: 34px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.18s ease,
+    color 0.18s ease,
+    filter 0.18s ease;
+}
+
+.star-button:hover:not(:disabled) {
+  transform: scale(1.12);
+
+  color: #3b7a78;
+
+  filter:
+    drop-shadow(
+      0 0 6px rgba(59, 122, 120, 0.22)
+    );
+}
+
+.star-button.active {
+  color: #3b7a78;
+
+  text-shadow:
+    0 0 8px rgba(59, 122, 120, 0.18);
+}
+
+.star-button:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.65;
+}
+
+
+/* =========================================================
+   RATING TEXT
+========================================================= */
+
+.rating-text {
+  margin-top: 6px;
+
+  color: #6b7280;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   FEEDBACK SECTION
+========================================================= */
+
+.feedback-section {
+  width: 100%;
+
+  margin: 0 0 20px;
+
+  padding: 18px 20px;
+
+  background: #fdfcf9;
+
+  border: 1px solid #e3ded5;
+
+  border-radius: 13px;
+}
+
+
+/* =========================================================
+   FEEDBACK TEXTAREA
+========================================================= */
+
+.feedback-section textarea {
+  display: block;
+
+  width: 100%;
+
+  min-height: 105px;
+
+  padding: 12px 14px;
+
+  border-radius: 10px;
+
+  border: 1px solid #d8d3ca;
+
+  outline: none;
+
+  background: #f7f5f0;
+
+  color: #263238;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  resize: vertical;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.feedback-section textarea::placeholder {
+  color: #8a9094;
+
+  opacity: 1;
+}
+
+.feedback-section textarea:focus {
+  border-color: #3b7a78;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(59, 122, 120, 0.12);
+}
+
+.feedback-section textarea:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+  background: #eeece7;
+}
+
+
+/* =========================================================
+   BUTTON AREA
+========================================================= */
+
+.rating-buttons {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin: 0;
+
+  padding-top: 18px;
+
+  border-top: 1px solid #e3ded5;
+}
+
+
+/* =========================================================
+   COMMON BUTTON
+========================================================= */
+
+.rating-buttons button {
+  min-height: 42px;
+
+  padding: 0 22px;
+
+  border-radius: 10px;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    opacity 0.2s ease;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.submit-rating-button {
+  border: none;
+
+  background: #3b7a78;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 7px 18px rgba(59, 122, 120, 0.15);
+}
+
+.submit-rating-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  background: #2f6563;
+
+  box-shadow:
+    0 10px 24px rgba(59, 122, 120, 0.20);
+}
+
+
+/* =========================================================
+   CANCEL BUTTON
+========================================================= */
+
+.cancel-rating-button {
+  border: 1px solid #d8d3ca;
+
+  background: #f7f5f0;
+
+  color: #243447;
+}
+
+.cancel-rating-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  background: #e7f1ef;
+
+  border-color: #c9dfdc;
+
+  color: #3b7a78;
+}
+
+
+/* =========================================================
+   BUTTON FOCUS
+========================================================= */
+
+.rating-buttons button:focus-visible {
+  outline: 2px solid #3b7a78;
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   DISABLED
+========================================================= */
+
+.rating-buttons button:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .rating-page {
+    padding: 35px 15px 60px;
+  }
+
+  .rating-card {
+    width: 100%;
+
+    margin-top: 5px;
+
+    padding: 25px 20px;
+
+    border-radius: 16px;
+  }
+
+  .rating-header {
+    margin-bottom: 20px;
+  }
+
+  .rating-header h1 {
+    font-size: 29px;
+  }
+
+  .rating-header p {
+    font-size: 13px;
+  }
+
+  .rating-info {
+    padding: 12px 15px;
+  }
+
+  .rating-info-row {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 4px;
+  }
+
+  .rating-info-value {
+    width: 100%;
+
+    text-align: left;
+  }
+
+  .rating-section,
+  .feedback-section {
+    padding: 17px 16px;
+
+    border-radius: 12px;
+  }
+
+  .rating-label {
+    font-size: 14px;
+  }
+
+  .stars-container {
+    gap: 4px;
+  }
+
+  .star-button {
+    width: 40px;
+
+    height: 40px;
+
+    font-size: 32px;
+  }
+
+  .feedback-section textarea {
+    min-height: 100px;
+  }
+
+  .rating-buttons {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .rating-buttons button {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .rating-page {
+    padding: 25px 10px 50px;
+  }
+
+  .rating-card {
+    padding: 21px 14px;
+
+    border-radius: 14px;
+  }
+
+  .rating-header {
+    margin-bottom: 18px;
+  }
+
+  .rating-header h1 {
+    font-size: 25px;
+  }
+
+  .rating-header p {
+    font-size: 12px;
+  }
+
+  .rating-message {
+    font-size: 12px;
+
+    padding: 9px 10px;
+  }
+
+  .rating-info {
+    padding: 12px;
+
+    border-radius: 11px;
+  }
+
+  .rating-info-label {
+    font-size: 12px;
+  }
+
+  .rating-info-value {
+    font-size: 13px;
+  }
+
+  .rating-section,
+  .feedback-section {
+    padding: 15px 13px;
+
+    border-radius: 11px;
+  }
+
+  .rating-label {
+    font-size: 14px;
+
+    margin-bottom: 9px;
+  }
+
+  .stars-container {
+    justify-content: space-between;
+
+    gap: 0;
+  }
+
+  .star-button {
+    width: 37px;
+
+    height: 37px;
+
+    font-size: 29px;
+  }
+
+  .rating-text {
+    font-size: 11px;
+  }
+
+  .feedback-section textarea {
+    min-height: 95px;
+
+    padding: 11px 12px;
+
+    font-size: 12px;
+  }
+
+  .rating-buttons {
+    padding-top: 15px;
+  }
+
+  .rating-buttons button {
+    min-height: 40px;
+
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 350px) {
+
+  .rating-card {
+    padding: 18px 11px;
+  }
+
+  .rating-section,
+  .feedback-section {
+    padding: 14px 11px;
+  }
+
+  .star-button {
+    width: 34px;
+
+    height: 34px;
+
+    font-size: 27px;
+  }
+
+  .rating-header h1 {
+    font-size: 23px;
+  }
+}

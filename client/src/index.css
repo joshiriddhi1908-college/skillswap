@@ -1,0 +1,342 @@
+/* =========================================================
+   SKILLSWAP - GLOBAL BASE STYLES
+   WARM WHITE / NAVY / TEAL THEME
+========================================================= */
+
+:root {
+  /* TEXT */
+  --text: #6b7280;
+  --text-h: #243447;
+
+  /* BACKGROUND */
+  --bg: #f7f5f0;
+
+  /* BORDER */
+  --border: #e3ded5;
+
+  /* CODE */
+  --code-bg: #f0ede7;
+
+  /* PRIMARY */
+  --accent: #3b7a78;
+  --accent-bg: #e7f1ef;
+  --accent-border: #c9dfdc;
+
+  /* SOCIAL */
+  --social-bg: rgba(231, 241, 239, 0.6);
+
+  /* SHADOW */
+  --shadow:
+    rgba(36, 52, 71, 0.08) 0 10px 15px -3px,
+    rgba(36, 52, 71, 0.05) 0 4px 6px -2px;
+
+  /* FONTS */
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+
+  letter-spacing: 0.18px;
+
+  color: var(--text);
+
+  background: var(--bg);
+
+  color-scheme: light;
+
+  font-synthesis: none;
+
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+  margin: 0;
+
+  background: #f7f5f0;
+
+  color: #6b7280;
+
+  font-family: var(--sans);
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+#root {
+  width: 100%;
+
+  max-width: 100%;
+
+  min-height: 100vh;
+
+  margin: 0 auto;
+
+  text-align: left;
+
+  box-sizing: border-box;
+
+  background: #f7f5f0;
+}
+
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+h1,
+h2 {
+  font-family: var(--heading);
+
+  font-weight: 700;
+
+  color: #243447;
+}
+
+h1 {
+  font-size: 56px;
+
+  letter-spacing: -1.68px;
+
+  margin: 32px 0;
+}
+
+h2 {
+  font-size: 24px;
+
+  line-height: 118%;
+
+  letter-spacing: -0.24px;
+
+  margin: 0 0 8px;
+}
+
+
+/* =========================================================
+   PARAGRAPHS
+========================================================= */
+
+p {
+  margin: 0;
+
+  color: #6b7280;
+}
+
+
+/* =========================================================
+   CODE
+========================================================= */
+
+code,
+.counter {
+  font-family: var(--mono);
+
+  display: inline-flex;
+
+  border-radius: 4px;
+
+  color: #243447;
+}
+
+code {
+  font-size: 15px;
+
+  line-height: 135%;
+
+  padding: 4px 8px;
+
+  background: #f0ede7;
+
+  border: 1px solid #e3ded5;
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+a {
+  color: #3b7a78;
+
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2f6563;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+button {
+  font-family: inherit;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+input,
+select,
+textarea {
+  font-family: inherit;
+
+  color: #263238;
+
+  background: #ffffff;
+
+  border-color: #d8d3ca;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+
+  border-color: #3b7a78;
+
+  box-shadow:
+    0 0 0 3px rgba(59, 122, 120, 0.10);
+}
+
+
+/* =========================================================
+   SELECTION
+========================================================= */
+
+::selection {
+  color: #ffffff;
+
+  background: #3b7a78;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  :root {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 36px;
+
+    margin: 20px 0;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  body {
+    background: #f7f5f0;
+  }
+
+  #root {
+    width: 100%;
+
+    max-width: 100%;
+
+    border: none;
+  }
+
+  h1 {
+    font-size: 32px;
+
+    letter-spacing: -0.8px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+  h1 {
+    font-size: 28px;
+
+    letter-spacing: -0.5px;
+  }
+
+  h2 {
+    font-size: 19px;
+  }
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eeeae3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b9c5c4;
+
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8fa8a6;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+
+    scroll-behavior: auto !important;
+  }
+}

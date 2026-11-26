@@ -1,0 +1,559 @@
+/* =========================================================
+   SKILLSWAP - BROWSE USERS
+   WARM WHITE / NAVY / TEAL THEME
+   ========================================================= */
+
+.browse-page {
+  min-height: 100vh;
+
+  padding: 45px 6%;
+
+  background: #f7f5f0;
+
+  color: #263238;
+}
+
+
+/* ===================== HERO ===================== */
+
+.browse-hero {
+  max-width: 1150px;
+
+  margin: auto;
+
+  padding: 20px 0 35px;
+}
+
+.browse-badge {
+  display: inline-block;
+
+  padding: 8px 15px;
+
+  border-radius: 30px;
+
+  background: #e7f1ef;
+
+  border: 1px solid #c9dfdc;
+
+  color: #3b7a78;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  margin-bottom: 15px;
+}
+
+.browse-hero h1 {
+  font-size: 45px;
+
+  line-height: 1.15;
+
+  margin: 0;
+
+  color: #243447;
+}
+
+.browse-hero h1 span {
+  color: #3b7a78;
+}
+
+.browse-hero p {
+  max-width: 620px;
+
+  color: #6b7280;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+
+  margin-top: 15px;
+}
+
+
+/* ===================== SEARCH ===================== */
+
+.browse-search {
+  max-width: 1150px;
+
+  margin: 10px auto 45px;
+
+  display: flex;
+
+  gap: 12px;
+
+  padding: 14px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3ded5;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 10px 35px rgba(36, 52, 71, 0.10);
+}
+
+.search-input {
+  flex: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 14px;
+
+  background: #f7f5f0;
+
+  border: 1px solid #e3ded5;
+
+  border-radius: 12px;
+}
+
+.search-input span {
+  font-size: 16px;
+
+  color: #3b7a78;
+}
+
+.search-input input {
+  width: 100%;
+
+  padding: 14px 0;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  font-size: 14px;
+
+  color: #263238;
+}
+
+.search-input input::placeholder {
+  color: #8a9295;
+}
+
+.browse-search button {
+  border: none;
+
+  padding: 0 28px;
+
+  border-radius: 12px;
+
+  background: #3b7a78;
+
+  color: #ffffff;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.browse-search button:hover {
+  transform: translateY(-2px);
+
+  background: #2f6563;
+
+  box-shadow:
+    0 8px 20px rgba(59, 122, 120, 0.16);
+}
+
+
+/* ===================== RESULT HEADER ===================== */
+
+.result-header {
+  max-width: 1150px;
+
+  margin: auto auto 20px;
+}
+
+.result-header h2 {
+  margin: 0;
+
+  color: #243447;
+
+  font-size: 23px;
+}
+
+.result-header p {
+  margin-top: 6px;
+
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+
+/* ===================== GRID ===================== */
+
+/* Mockup પ્રમાણે users vertical list માં */
+
+.users-grid {
+  max-width: 1150px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 18px;
+}
+
+
+/* ===================== USER CARD ===================== */
+
+.user-card {
+  background: #ffffff;
+
+  border: 1px solid #e3ded5;
+
+  border-radius: 22px;
+
+  padding: 23px;
+
+  box-shadow:
+    0 12px 35px rgba(36, 52, 71, 0.08);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #c9dfdc;
+
+  box-shadow:
+    0 18px 45px rgba(36, 52, 71, 0.12);
+}
+
+
+/* ===================== USER HEADER ===================== */
+
+.user-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #e3ded5;
+}
+
+.user-avatar {
+  width: 58px;
+  height: 58px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #e7f1ef;
+
+  color: #3b7a78;
+
+  font-size: 23px;
+
+  font-weight: 700;
+
+  border: 1px solid #c9dfdc;
+}
+
+.user-basic {
+  min-width: 0;
+}
+
+.user-basic h3 {
+  margin: 0 0 5px;
+
+  font-size: 18px;
+
+  color: #243447;
+}
+
+.user-basic p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+
+/* ===================== SKILL BLOCK ===================== */
+
+.skill-block {
+  margin-top: 19px;
+}
+
+.skill-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 10px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  color: #263238;
+}
+
+.tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+.skill-tag {
+  padding: 6px 11px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+.skill-tag.offered {
+  background: #e7f1ef;
+
+  color: #3b7a78;
+
+  border: 1px solid #c9dfdc;
+}
+
+.skill-tag.wanted {
+  background: #f0f3f2;
+
+  color: #536567;
+
+  border: 1px solid #d8e0de;
+}
+
+.muted {
+  color: #8a9295;
+
+  font-size: 12px;
+}
+
+
+/* ===================== AVAILABILITY ===================== */
+
+.availability {
+  margin-top: 20px;
+
+  padding: 12px;
+
+  border-radius: 12px;
+
+  background: #f7f5f0;
+
+  border: 1px solid #e3ded5;
+}
+
+.availability > span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #3f5054;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.availability div {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 6px;
+}
+
+.availability small {
+  padding: 5px 9px;
+
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  border: 1px solid #d8d3ca;
+
+  color: #6b7280;
+
+  font-size: 10px;
+}
+
+
+/* ===================== REQUEST BUTTON ===================== */
+
+.request-btn {
+  width: 100%;
+
+  margin-top: 18px;
+
+  padding: 13px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #3b7a78;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 10px;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.request-btn:hover {
+  transform: translateY(-2px);
+
+  background: #2f6563;
+
+  box-shadow:
+    0 8px 20px rgba(59, 122, 120, 0.16);
+}
+
+
+/* ===================== EMPTY ===================== */
+
+.empty-box,
+.status-box {
+  max-width: 500px;
+
+  margin: 60px auto;
+
+  text-align: center;
+
+  padding: 40px;
+
+  background: #ffffff;
+
+  border-radius: 20px;
+
+  border: 1px solid #e3ded5;
+
+  box-shadow:
+    0 12px 35px rgba(36, 52, 71, 0.08);
+}
+
+.empty-icon {
+  font-size: 40px;
+
+  margin-bottom: 10px;
+}
+
+.empty-box h3 {
+  color: #243447;
+}
+
+.empty-box p,
+.status-box p {
+  color: #6b7280;
+}
+
+
+/* ===================== LOADER ===================== */
+
+.loader {
+  width: 35px;
+
+  height: 35px;
+
+  border: 4px solid #e3ded5;
+
+  border-top-color: #3b7a78;
+
+  border-radius: 50%;
+
+  animation: spin 0.8s linear infinite;
+
+  margin: auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ===================== MOBILE ===================== */
+
+@media (max-width: 750px) {
+  .browse-page {
+    padding: 30px 20px;
+  }
+
+  .browse-hero h1 {
+    font-size: 34px;
+  }
+
+  .browse-search {
+    flex-direction: column;
+  }
+
+  .browse-search button {
+    padding: 13px;
+  }
+
+  .user-card {
+    padding: 18px;
+  }
+
+  .user-header {
+    padding-bottom: 16px;
+  }
+
+  .user-avatar {
+    width: 52px;
+
+    height: 52px;
+
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,1164 @@
+/* =========================================================
+   SKILLSWAP - WARM WHITE / NAVY / TEAL PROFESSIONAL THEME
+   ---------------------------------------------------------
+   Background : Warm White
+   Cards      : Pure White
+   Primary    : Navy
+   Accent     : Teal
+   Success    : Sage Green
+   Warning    : Warm Neutral
+   Danger     : Soft Rose
+========================================================= */
+
+:root {
+  /* MAIN THEME */
+  --warm-bg: #f7f5f0;
+  --warm-bg-2: #f0ede7;
+
+  --white: #ffffff;
+  --card: #ffffff;
+
+  /* TEXT */
+  --text: #263238;
+  --text-heading: #243447;
+  --text-secondary: #6b7280;
+  --text-muted: #8b9295;
+
+  /* BORDER */
+  --border: #e3ded5;
+  --border-dark: #d8d3ca;
+
+  /* PRIMARY NAVY */
+  --primary: #243447;
+  --primary-hover: #1c2a38;
+
+  /* TEAL */
+  --teal: #3b7a78;
+  --teal-hover: #2f6563;
+  --teal-light: #e7f1ef;
+  --teal-border: #c9dfdc;
+
+  /* SUCCESS */
+  --green: #5f8068;
+  --green-light: #eaf3ef;
+  --green-border: #c9ddd3;
+
+  /* WARNING */
+  --amber: #9a7845;
+  --amber-light: #f8f1e4;
+  --amber-border: #e2d2b6;
+
+  /* DANGER */
+  --rose: #b85c5c;
+  --rose-light: #f8eeee;
+  --rose-border: #e5c8c8;
+
+  /* NEUTRAL BLUE-GRAY */
+  --blue: #61758a;
+  --blue-light: #eef2f5;
+
+  /* SHADOWS */
+  --shadow: 0 10px 30px rgba(36, 52, 71, 0.07);
+  --shadow-hover: 0 16px 38px rgba(36, 52, 71, 0.11);
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+
+  color: var(--text) !important;
+
+  background: var(--warm-bg) !important;
+
+  background-image: none !important;
+
+  position: relative;
+
+  isolation: isolate;
+
+  overflow-x: hidden;
+}
+
+
+/* Remove old neon / animated backgrounds */
+
+body::before,
+body::after,
+#root::before,
+#root::after {
+  display: none !important;
+  animation: none !important;
+  background: none !important;
+}
+
+
+/* ROOT */
+
+#root {
+  position: relative;
+
+  z-index: 1;
+
+  background: transparent !important;
+}
+
+
+/* =========================================================
+   BASIC ELEMENTS
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-heading) !important;
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+
+/* =========================================================
+   PAGINATION
+========================================================= */
+
+.pagination button {
+  color: var(--text-secondary) !important;
+
+  background: var(--white) !important;
+
+  border: 1px solid var(--border) !important;
+
+  box-shadow: none !important;
+}
+
+.pagination button:hover,
+.pagination button.active {
+  color: #ffffff !important;
+
+  background: var(--teal) !important;
+
+  border-color: var(--teal) !important;
+
+  box-shadow: none !important;
+}
+
+
+/* =========================================================
+   LOGIN / SIGNUP / ADD SKILL / REQUEST
+========================================================= */
+
+.login-page,
+.signup-page,
+.add-skill-page,
+.request-page {
+  background: var(--warm-bg) !important;
+}
+
+
+.login-box,
+.signup-box,
+.add-skill-box,
+.request-box {
+  color: var(--text) !important;
+
+  background: var(--white) !important;
+
+  border: 1px solid var(--border) !important;
+
+  border-radius: 20px !important;
+
+  box-shadow: var(--shadow) !important;
+
+  backdrop-filter: none !important;
+}
+
+
+/* Top accent line */
+
+.login-box::before,
+.signup-box::before,
+.add-skill-box::before,
+.request-box::before {
+  background: var(--teal) !important;
+
+  animation: none !important;
+}
+
+
+/* Form headings */
+
+.login-box h1,
+.signup-box h1,
+.add-skill-box h1,
+.request-box h1 {
+  color: var(--text-heading) !important;
+
+  background: none !important;
+
+  -webkit-background-clip: initial !important;
+
+  background-clip: initial !important;
+
+  -webkit-text-fill-color: var(--text-heading) !important;
+}
+
+
+/* Labels */
+
+.login-box label,
+.signup-box label,
+.add-skill-box label,
+.request-box label {
+  color: var(--text) !important;
+}
+
+
+/* Inputs */
+
+.login-box input,
+.signup-box input,
+.add-skill-box input,
+.add-skill-box select,
+.request-box input,
+.request-box textarea,
+.request-box select {
+  color: var(--text) !important;
+
+  background: var(--warm-bg) !important;
+
+  border: 1px solid var(--border-dark) !important;
+}
+
+.login-box input::placeholder,
+.signup-box input::placeholder,
+.add-skill-box input::placeholder,
+.request-box input::placeholder,
+.request-box textarea::placeholder {
+  color: var(--text-muted) !important;
+}
+
+
+/* Input focus */
+
+.login-box input:focus,
+.signup-box input:focus,
+.add-skill-box input:focus,
+.add-skill-box select:focus,
+.request-box input:focus,
+.request-box textarea:focus,
+.request-box select:focus {
+  background: var(--white) !important;
+
+  border-color: var(--teal) !important;
+
+  box-shadow:
+    0 0 0 3px rgba(59, 122, 120, 0.12) !important;
+}
+
+
+/* Main buttons */
+
+.login-box button,
+.signup-box button,
+.add-skill-box button,
+.request-box button {
+  color: #ffffff !important;
+
+  background: var(--teal) !important;
+
+  box-shadow: none !important;
+}
+
+.login-box button:hover,
+.signup-box button:hover,
+.add-skill-box button:hover,
+.request-box button:hover {
+  background: var(--teal-hover) !important;
+
+  box-shadow:
+    0 8px 20px rgba(59, 122, 120, 0.16) !important;
+}
+
+
+/* =========================================================
+   REPORT MODAL
+========================================================= */
+
+.report-overlay {
+  background: rgba(36, 52, 71, 0.45) !important;
+
+  backdrop-filter: blur(5px);
+}
+
+.report-modal {
+  color: var(--text) !important;
+
+  background: var(--white) !important;
+
+  border: 1px solid var(--border) !important;
+
+  box-shadow:
+    0 25px 60px rgba(36, 52, 71, 0.18) !important;
+}
+
+.report-modal h2 {
+  color: var(--text-heading) !important;
+}
+
+.report-modal label {
+  color: var(--text) !important;
+}
+
+.report-modal select,
+.report-modal textarea {
+  color: var(--text) !important;
+
+  background: var(--warm-bg) !important;
+
+  border: 1px solid var(--border-dark) !important;
+}
+
+.report-modal select:focus,
+.report-modal textarea:focus {
+  border-color: var(--teal) !important;
+
+  box-shadow:
+    0 0 0 3px rgba(59, 122, 120, 0.10) !important;
+}
+
+.report-actions button {
+  color: #ffffff !important;
+
+  background: var(--teal) !important;
+}
+
+.report-actions button.cancel {
+  color: var(--text) !important;
+
+  background: var(--warm-bg-2) !important;
+}
+
+
+/* =========================================================
+   SAFETY INFO
+========================================================= */
+
+.safety-info {
+  color: var(--text-secondary) !important;
+
+  background: var(--teal-light) !important;
+
+  border: 1px solid var(--teal-border) !important;
+}
+
+.safety-warning {
+  color: #765f3d !important;
+
+  background: var(--amber-light) !important;
+
+  border-left: 4px solid var(--amber) !important;
+}
+
+.safety-confirmation {
+  color: var(--text) !important;
+
+  background: var(--teal-light) !important;
+
+  border-left: 4px solid var(--teal) !important;
+}
+
+
+/* =========================================================
+   PROFILE ACTIONS
+========================================================= */
+
+.profile-actions button {
+  color: #ffffff !important;
+
+  background: var(--teal) !important;
+
+  border: none !important;
+}
+
+.profile-actions button:hover {
+  background: var(--teal-hover) !important;
+}
+
+.profile-actions button.secondary {
+  color: var(--text) !important;
+
+  background: var(--warm-bg-2) !important;
+
+  border: 1px solid var(--border) !important;
+}
+
+
+/* =========================================================
+   FORM MESSAGES
+========================================================= */
+
+.form-message {
+  border-radius: 10px;
+}
+
+.form-message.success {
+  color: var(--green) !important;
+
+  background: var(--green-light) !important;
+
+  border: 1px solid var(--green-border) !important;
+}
+
+.form-message.error {
+  color: var(--rose) !important;
+
+  background: var(--rose-light) !important;
+
+  border: 1px solid var(--rose-border) !important;
+}
+
+
+/* =========================================================
+   REQUEST STATUS
+========================================================= */
+
+.request-status {
+  border-radius: 999px !important;
+}
+
+.request-status.pending {
+  color: var(--teal) !important;
+
+  background: var(--teal-light) !important;
+
+  border: 1px solid var(--teal-border);
+}
+
+.request-status.accepted {
+  color: var(--green) !important;
+
+  background: var(--green-light) !important;
+
+  border: 1px solid var(--green-border);
+}
+
+.request-status.rejected {
+  color: var(--rose) !important;
+
+  background: var(--rose-light) !important;
+
+  border: 1px solid var(--rose-border);
+}
+
+
+/* =========================================================
+   EMPTY / LOADING
+========================================================= */
+
+.empty-state,
+.requests-empty {
+  color: var(--text) !important;
+
+  background: var(--white) !important;
+
+  border: 1px dashed var(--border-dark) !important;
+
+  box-shadow: none !important;
+}
+
+.empty-state h3,
+.requests-empty h3 {
+  color: var(--text-heading) !important;
+}
+
+.empty-state p,
+.requests-empty p {
+  color: var(--text-secondary) !important;
+}
+
+.loading,
+.requests-loading {
+  color: var(--text-secondary) !important;
+}
+
+
+/* =========================================================
+   CARDS - GLOBAL
+========================================================= */
+
+.skill-card,
+.profile-card,
+.skill-details-card,
+.request-card,
+.settings-card,
+.announcement-card,
+.my-skill-card {
+  color: var(--text) !important;
+
+  background: var(--white) !important;
+
+  border-color: var(--border) !important;
+
+  box-shadow: var(--shadow) !important;
+}
+
+
+/* Card hover */
+
+.skill-card:hover,
+.request-card:hover,
+.my-skill-card:hover {
+  border-color: var(--teal-border) !important;
+
+  box-shadow: var(--shadow-hover) !important;
+}
+
+
+/* Card text */
+
+.skill-card h1,
+.skill-card h2,
+.skill-card h3,
+.skill-card h4,
+
+.profile-card h1,
+.profile-card h2,
+.profile-card h3,
+
+.skill-details-card h1,
+.skill-details-card h2,
+.skill-details-card h3,
+
+.request-card h1,
+.request-card h2,
+.request-card h3,
+
+.settings-card h1,
+.settings-card h2,
+.settings-card h3,
+
+.announcement-card h1,
+.announcement-card h2,
+.announcement-card h3,
+
+.my-skill-card h1,
+.my-skill-card h2,
+.my-skill-card h3 {
+  color: var(--text-heading) !important;
+}
+
+
+/* =========================================================
+   GENERAL INPUTS
+========================================================= */
+
+input,
+select,
+textarea {
+  color: var(--text) !important;
+
+  background: var(--white) !important;
+
+  border-color: var(--border-dark) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted) !important;
+}
+
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.profile-card {
+  background: var(--white) !important;
+
+  border: 1px solid var(--border) !important;
+
+  box-shadow: var(--shadow) !important;
+}
+
+.profile-card > h1 {
+  color: var(--text-heading) !important;
+
+  background: none !important;
+
+  -webkit-text-fill-color: var(--text-heading) !important;
+}
+
+.profile-field > label {
+  color: var(--text) !important;
+}
+
+.profile-field > input,
+.profile-field > select {
+  color: var(--text) !important;
+
+  background: var(--warm-bg) !important;
+
+  border-color: var(--border-dark) !important;
+}
+
+.profile-field > input:focus,
+.profile-field > select:focus {
+  border-color: var(--teal) !important;
+
+  box-shadow:
+    0 0 0 3px rgba(59, 122, 120, 0.10) !important;
+}
+
+.profile-photo {
+  border: 3px solid var(--teal-border);
+}
+
+.profile-photo-placeholder {
+  color: #ffffff !important;
+
+  background: var(--teal) !important;
+}
+
+.photo-upload-button {
+  color: #ffffff !important;
+
+  background: var(--teal) !important;
+}
+
+.photo-upload-button:hover {
+  background: var(--teal-hover) !important;
+}
+
+.remove-photo-button {
+  color: var(--rose) !important;
+
+  background: var(--rose-light) !important;
+
+  border: 1px solid var(--rose-border) !important;
+}
+
+
+/* Availability */
+
+.availability-options label {
+  color: var(--text-secondary) !important;
+}
+
+
+/* Wanted skills */
+
+.wanted-skill {
+  color: var(--teal) !important;
+
+  background: var(--teal-light) !important;
+
+  border: 1px solid var(--teal-border);
+}
+
+.wanted-skill button {
+  color: var(--teal) !important;
+
+  background: transparent !important;
+}
+
+.no-skills {
+  color: var(--text-muted) !important;
+}
+
+
+/* Profile buttons */
+
+.profile-buttons button {
+  color: #ffffff !important;
+
+  background: var(--teal) !important;
+}
+
+.profile-buttons button:hover {
+  background: var(--teal-hover) !important;
+}
+
+
+/* =========================================================
+   MY REQUESTS
+========================================================= */
+
+.requests-page {
+  color: var(--text) !important;
+}
+
+.requests-page h1,
+.requests-page h2,
+.requests-page h3 {
+  color: var(--text-heading) !important;
+}
+
+.requests-page > p {
+  color: var(--text-secondary) !important;
+}
+
+.request-card {
+  background: var(--white) !important;
+
+  border: 1px solid var(--border) !important;
+
+  border-left: 4px solid var(--teal) !important;
+
+  color: var(--text) !important;
+
+  box-shadow: var(--shadow) !important;
+}
+
+.request-card h3 {
+  color: var(--text-heading) !important;
+}
+
+.request-card p {
+  color: var(--text-secondary) !important;
+}
+
+.request-card strong {
+  color: var(--text) !important;
+}
+
+.request-actions {
+  border-top: 1px solid var(--border) !important;
+}
+
+
+/* Accept */
+
+.request-actions .accept-btn {
+  background: var(--green) !important;
+
+  color: #ffffff !important;
+}
+
+
+/* Reject */
+
+.request-actions .reject-btn {
+  background: var(--rose) !important;
+
+  color: #ffffff !important;
+}
+
+
+/* Report */
+
+.request-actions .report-btn {
+  background: var(--teal) !important;
+
+  color: #ffffff !important;
+}
+
+
+/* Delete */
+
+.request-actions .delete-btn {
+  background: var(--rose-light) !important;
+
+  background-color: var(--rose-light) !important;
+
+  color: var(--rose) !important;
+
+  border: 1px solid var(--rose-border) !important;
+
+  box-shadow: none !important;
+}
+
+.request-actions .delete-btn:hover {
+  background: #f3dfdf !important;
+
+  color: #a34f4f !important;
+}
+
+
+/* =========================================================
+   SKILL DETAILS
+========================================================= */
+
+.skill-details-card {
+  background: var(--white) !important;
+
+  border: 1px solid var(--border) !important;
+
+  box-shadow: var(--shadow) !important;
+}
+
+.skill-details-card p {
+  color: var(--text-secondary) !important;
+}
+
+
+/* =========================================================
+   MY SKILLS
+========================================================= */
+
+.my-skill-card {
+  background: var(--white) !important;
+
+  border: 1px solid var(--border) !important;
+
+  border-left: 4px solid var(--teal) !important;
+
+  color: var(--text) !important;
+}
+
+.skill-card-title h3 {
+  color: var(--text-heading) !important;
+}
+
+.skill-icon {
+  color: #ffffff !important;
+
+  background: var(--teal) !important;
+}
+
+.skill-category {
+  color: var(--teal) !important;
+}
+
+.skill-detail-box,
+.skill-description-box {
+  background: var(--warm-bg) !important;
+
+  border: 1px solid var(--border) !important;
+}
+
+.skill-detail-box span {
+  color: var(--text-muted) !important;
+}
+
+.skill-detail-box strong {
+  color: var(--text) !important;
+}
+
+.skill-description-box span {
+  color: var(--teal) !important;
+}
+
+.skill-description-box p {
+  color: var(--text-secondary) !important;
+}
+
+
+/* My skill status */
+
+.skill-status.pending {
+  color: var(--teal) !important;
+
+  background: var(--teal-light) !important;
+
+  border: 1px solid var(--teal-border) !important;
+}
+
+.skill-status.approved {
+  color: var(--green) !important;
+
+  background: var(--green-light) !important;
+
+  border: 1px solid var(--green-border) !important;
+}
+
+.skill-status.rejected {
+  color: var(--rose) !important;
+
+  background: var(--rose-light) !important;
+
+  border: 1px solid var(--rose-border) !important;
+}
+
+
+/* Edit */
+
+.edit-skill-btn {
+  color: #ffffff !important;
+
+  background: var(--teal) !important;
+}
+
+.edit-skill-btn:hover {
+  background: var(--teal-hover) !important;
+}
+
+
+/* Delete */
+
+.delete-skill-btn {
+  color: var(--rose) !important;
+
+  background: var(--rose-light) !important;
+
+  border: 1px solid var(--rose-border) !important;
+}
+
+.delete-skill-btn:hover {
+  background: #f3dfdf !important;
+}
+
+
+/* =========================================================
+   EXPLORE SKILLS
+========================================================= */
+
+.explore-skills,
+.skills-page,
+.browse-skills,
+.explore-page {
+  color: var(--text) !important;
+}
+
+.explore-skills .skill-card,
+.skills-page .skill-card,
+.browse-skills .skill-card {
+  background: var(--white) !important;
+
+  border-color: var(--border) !important;
+
+  box-shadow: var(--shadow) !important;
+}
+
+.explore-skills .skill-card:hover,
+.skills-page .skill-card:hover {
+  border-color: var(--teal-border) !important;
+
+  box-shadow: var(--shadow-hover) !important;
+}
+
+
+/* =========================================================
+   ANNOUNCEMENTS
+========================================================= */
+
+.announcement-card {
+  background: var(--white) !important;
+
+  border: 1px solid var(--border) !important;
+
+  box-shadow: var(--shadow) !important;
+}
+
+.announcement-card p {
+  color: var(--text-secondary) !important;
+}
+
+
+/* =========================================================
+   SETTINGS
+========================================================= */
+
+.settings-page {
+  color: var(--text) !important;
+}
+
+.settings-page h1,
+.settings-page h2,
+.settings-page h3 {
+  color: var(--text-heading) !important;
+}
+
+.settings-page p {
+  color: var(--text-secondary) !important;
+}
+
+.settings-card {
+  background: var(--white) !important;
+
+  border: 1px solid var(--border) !important;
+
+  box-shadow: var(--shadow) !important;
+}
+
+.settings-item {
+  background: var(--white) !important;
+
+  border-bottom: 1px solid var(--border) !important;
+}
+
+.settings-item:hover {
+  background: var(--teal-light) !important;
+}
+
+
+/* Toggle */
+
+.settings-page input[type="checkbox"] {
+  accent-color: var(--teal);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+  color: var(--text-secondary) !important;
+
+  background: var(--white) !important;
+
+  border-top: 1px solid var(--border) !important;
+}
+
+footer p,
+footer span {
+  color: var(--text-secondary) !important;
+}
+
+
+/* =========================================================
+   SELECTION
+========================================================= */
+
+::selection {
+  color: #ffffff !important;
+
+  background: var(--teal) !important;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eeeae3 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b9c5c4 !important;
+
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8fa8a6 !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .navbar,
+  nav {
+    background: var(--white) !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .navbar,
+  nav {
+    background: var(--white) !important;
+  }
+
+  .login-box,
+  .signup-box,
+  .add-skill-box,
+  .request-box {
+    background: var(--white) !important;
+  }
+
+  .skill-card,
+  .profile-card,
+  .request-card,
+  .my-skill-card {
+    background: var(--white) !important;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .report-modal {
+    background: var(--white) !important;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+
+    scroll-behavior: auto !important;
+  }
+}

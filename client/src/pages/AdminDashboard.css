@@ -1,0 +1,346 @@
+/* =========================================================
+   SKILLSWAP - ADMIN DASHBOARD
+   WARM WHITE / NAVY / TEAL THEME
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.admin-dashboard-page {
+  width: min(1200px, 92%);
+  min-height: calc(100vh - 80px);
+  margin: 0 auto;
+  padding: 40px 0 60px;
+
+  color: #263238;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.admin-dashboard-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.admin-dashboard-label {
+  margin: 0 0 8px;
+
+  color: #3b7a78;
+
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.admin-dashboard-header h1 {
+  margin: 0;
+
+  font-size: 34px;
+  line-height: 1.2;
+
+  color: #243447;
+}
+
+.admin-dashboard-subtitle {
+  margin: 10px 0 0;
+
+  color: #6b7280;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.admin-dashboard-back {
+  border: 1px solid #e3ded5;
+  border-radius: 10px;
+
+  padding: 11px 18px;
+
+  background: #ffffff;
+  color: #243447;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.admin-dashboard-back:hover {
+  background: #e7f1ef;
+
+  border-color: #c9dfdc;
+
+  color: #3b7a78;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.admin-dashboard-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+
+/* =========================================================
+   ADMIN CARD
+   ========================================================= */
+
+.admin-dashboard-card {
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 18px;
+
+  min-height: 170px;
+
+  padding: 25px;
+
+  border: 1px solid #e3ded5;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  color: #263238;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 8px 24px rgba(36, 52, 71, 0.08);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admin-dashboard-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #c9dfdc;
+
+  background: #fdfdfb;
+
+  box-shadow:
+    0 12px 30px rgba(36, 52, 71, 0.13);
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.admin-card-icon {
+  width: 52px;
+  height: 52px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #e7f1ef;
+
+  border: 1px solid #c9dfdc;
+
+  color: #3b7a78;
+
+  font-size: 25px;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.admin-card-content {
+  padding-right: 25px;
+}
+
+.admin-card-content h2 {
+  margin: 2px 0 9px;
+
+  font-size: 20px;
+
+  color: #243447;
+}
+
+.admin-card-content p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   ARROW
+   ========================================================= */
+
+.admin-card-arrow {
+  position: absolute;
+
+  right: 22px;
+  bottom: 20px;
+
+  color: #3b7a78;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  transition: transform 0.2s ease;
+}
+
+.admin-dashboard-card:hover .admin-card-arrow {
+  transform: translateX(4px);
+
+  color: #2f6563;
+}
+
+
+/* =========================================================
+   INFO
+   ========================================================= */
+
+.admin-dashboard-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 30px;
+
+  padding: 18px 20px;
+
+  border: 1px solid #d8e0de;
+  border-radius: 12px;
+
+  background: #e7f1ef;
+
+  color: #263238;
+
+  box-shadow:
+    0 5px 16px rgba(36, 52, 71, 0.05);
+}
+
+.admin-dashboard-info strong {
+  font-size: 14px;
+
+  color: #243447;
+}
+
+.admin-dashboard-info span {
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   FORCE NAVY / DARK TEXT
+   ========================================================= */
+
+.admin-dashboard-page h1,
+.admin-dashboard-page h2,
+.admin-dashboard-page h3,
+.admin-dashboard-page p,
+.admin-dashboard-page span,
+.admin-dashboard-page strong {
+  color: #263238;
+}
+
+.admin-dashboard-page h1,
+.admin-dashboard-page h2 {
+  color: #243447;
+}
+
+.admin-dashboard-label,
+.admin-card-arrow {
+  color: #3b7a78;
+}
+
+.admin-dashboard-subtitle,
+.admin-card-content p,
+.admin-dashboard-info span {
+  color: #6b7280;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 800px) {
+  .admin-dashboard-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-dashboard-back {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .admin-dashboard-page {
+    width: 94%;
+    padding-top: 25px;
+  }
+
+  .admin-dashboard-header h1 {
+    font-size: 28px;
+  }
+
+  .admin-dashboard-card {
+    padding: 20px;
+  }
+
+  .admin-card-icon {
+    width: 45px;
+    height: 45px;
+
+    font-size: 21px;
+  }
+
+  .admin-card-content h2 {
+    font-size: 18px;
+  }
+
+  .admin-dashboard-info {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+  }
+}

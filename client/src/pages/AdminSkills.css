@@ -1,0 +1,571 @@
+/* =========================================================
+   SKILLSWAP - ADMIN SKILLS PAGE
+   WARM WHITE / NAVY / TEAL THEME
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.admin-skills-page {
+  width: min(1150px, 92%);
+
+  min-height: 100vh;
+
+  margin: 0 auto;
+
+  padding: 60px 0 90px;
+
+  color: #263238;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.admin-skills-header {
+  text-align: center;
+
+  margin-bottom: 40px;
+}
+
+.admin-page-badge {
+  display: inline-flex;
+
+  padding: 7px 16px;
+
+  border-radius: 50px;
+
+  background: #e7f1ef;
+
+  border: 1px solid #c9dfdc;
+
+  color: #3b7a78;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 15px;
+}
+
+.admin-skills-header h1 {
+  margin: 0 0 12px;
+
+  color: #243447 !important;
+
+  font-size: 38px;
+
+  font-weight: 850;
+}
+
+.admin-skills-header p {
+  max-width: 650px;
+
+  margin: auto;
+
+  color: #6b7280;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   MAIN CARD
+   ========================================================= */
+
+.admin-skills-card {
+  background: #ffffff;
+
+  border: 1px solid #e3ded5;
+
+  border-radius: 20px;
+
+  padding: 30px;
+
+  box-shadow:
+    0 15px 40px rgba(36, 52, 71, 0.10);
+}
+
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.admin-skills-card-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding-bottom: 22px;
+
+  margin-bottom: 25px;
+
+  border-bottom: 1px solid #e3ded5;
+}
+
+.admin-skills-card-header h2 {
+  margin: 0 0 7px;
+
+  color: #243447 !important;
+
+  font-size: 25px;
+
+  font-weight: 800;
+}
+
+.admin-skills-card-header p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+.admin-pending-count {
+  width: 50px;
+
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: #3b7a78;
+
+  color: #ffffff;
+
+  font-size: 18px;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 6px 15px rgba(59, 122, 120, 0.16);
+}
+
+
+/* =========================================================
+   LIST
+   ========================================================= */
+
+.admin-skill-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+
+/* =========================================================
+   SKILL CARD
+   ========================================================= */
+
+.admin-skill-item {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  padding: 24px;
+
+  background: #fdfcf9;
+
+  border: 1px solid #e3ded5;
+
+  border-left: 4px solid #3b7a78;
+
+  border-radius: 18px;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admin-skill-item:hover {
+  transform: translateY(-3px);
+
+  border-color: #c9dfdc;
+
+  border-left-color: #2f6563;
+
+  box-shadow:
+    0 12px 30px rgba(36, 52, 71, 0.11);
+}
+
+
+/* =========================================================
+   INFO
+   ========================================================= */
+
+.admin-skill-info {
+  flex: 1;
+}
+
+.admin-skill-title-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 18px;
+}
+
+.admin-skill-title-row h3 {
+  margin: 0;
+
+  color: #243447 !important;
+
+  font-size: 22px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.admin-status {
+  padding: 6px 14px;
+
+  border-radius: 20px;
+
+  background: #e7f1ef;
+
+  border: 1px solid #c9dfdc;
+
+  color: #3b7a78;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   META BOX
+   ========================================================= */
+
+.admin-skill-meta {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 14px;
+
+  margin-bottom: 15px;
+}
+
+.admin-meta-box {
+  padding: 13px;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  border: 1px solid #e3ded5;
+}
+
+.admin-meta-box span {
+  display: block;
+
+  color: #6b7280;
+
+  font-size: 11px;
+
+  margin-bottom: 5px;
+}
+
+.admin-meta-box strong {
+  color: #263238 !important;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.admin-description-box {
+  margin-bottom: 15px;
+
+  padding: 14px;
+
+  background: #f7f5f0;
+
+  border-left: 3px solid #3b7a78;
+
+  border-radius: 10px;
+}
+
+.admin-description-box span {
+  display: block;
+
+  color: #3b7a78;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  margin-bottom: 6px;
+}
+
+.admin-description-box p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   USER INFO
+   ========================================================= */
+
+.admin-user-info {
+  display: flex;
+
+  gap: 30px;
+
+  flex-wrap: wrap;
+
+  padding-top: 14px;
+
+  border-top: 1px solid #e3ded5;
+}
+
+.admin-user-info > div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.admin-user-info span {
+  color: #6b7280;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+.admin-user-info strong {
+  color: #263238 !important;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
+
+.admin-skill-actions {
+  width: 130px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 12px;
+}
+
+.admin-skill-actions button {
+  height: 42px;
+
+  border-radius: 10px;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+/* =========================================================
+   APPROVE
+   ========================================================= */
+
+.admin-approve-btn {
+  background: #eaf3ef;
+
+  border: 1px solid #c9ddd3;
+
+  color: #5f8068;
+}
+
+.admin-approve-btn:hover {
+  background: #dcece4;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   REJECT
+   ========================================================= */
+
+.admin-reject-btn {
+  background: #f8eeee;
+
+  border: 1px solid #e5c8c8;
+
+  color: #b85c5c;
+}
+
+.admin-reject-btn:hover {
+  background: #f3dfdf;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   DISABLED
+   ========================================================= */
+
+.admin-skill-actions button:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.admin-no-skills {
+  min-height: 250px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+.admin-empty-icon {
+  font-size: 45px;
+
+  margin-bottom: 15px;
+}
+
+.admin-no-skills h3 {
+  margin: 0 0 8px;
+
+  color: #243447 !important;
+
+  font-size: 22px;
+}
+
+.admin-no-skills p {
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .admin-skill-item {
+    flex-direction: column;
+  }
+
+  .admin-skill-actions {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .admin-skill-actions button {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .admin-skills-page {
+    width: 94%;
+
+    padding: 35px 0 60px;
+  }
+
+  .admin-skills-header h1 {
+    font-size: 28px;
+  }
+
+  .admin-skills-card {
+    padding: 18px;
+
+    border-radius: 16px;
+  }
+
+  .admin-skills-card-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .admin-skill-item {
+    padding: 18px;
+  }
+
+  .admin-skill-title-row {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .admin-skill-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-skill-actions {
+    grid-template-columns: 1fr;
+  }
+}

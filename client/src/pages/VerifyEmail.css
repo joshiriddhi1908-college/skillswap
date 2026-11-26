@@ -1,0 +1,390 @@
+/* =========================================================
+   VERIFY EMAIL PAGE
+   WARM WHITE / NAVY / TEAL PROFESSIONAL THEME
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   VERIFY PAGE
+========================================================= */
+
+.verify-page {
+  min-height: 100vh;
+
+  width: 100%;
+
+  background: #f7f5f0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 20px;
+
+  color: #263238;
+}
+
+
+/* =========================================================
+   VERIFY BOX
+========================================================= */
+
+.verify-box {
+  width: 100%;
+
+  max-width: 430px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3ded5;
+
+  border-radius: 18px;
+
+  padding: 40px;
+
+  box-shadow:
+    0 20px 45px rgba(36, 52, 71, 0.10);
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.verify-box h1 {
+  margin: 0 0 15px;
+
+  color: #243447;
+
+  font-size: 28px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.verify-text {
+  color: #6b7280;
+
+  margin: 0 0 5px;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   EMAIL
+========================================================= */
+
+.verify-email {
+  color: #263238;
+
+  font-weight: 700;
+
+  word-break: break-word;
+
+  margin: 0 0 25px;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.verify-box form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+
+/* =========================================================
+   OTP INPUT
+========================================================= */
+
+.verify-box input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 14px;
+
+  border: 1px solid #d8d3ca;
+
+  border-radius: 8px;
+
+  background: #f7f5f0;
+
+  color: #263238;
+
+  font-size: 20px;
+
+  text-align: center;
+
+  letter-spacing: 6px;
+
+  outline: none;
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   INPUT FOCUS
+========================================================= */
+
+.verify-box input:focus {
+  background: #ffffff;
+
+  border-color: #3b7a78;
+
+  box-shadow:
+    0 0 0 3px rgba(59, 122, 120, 0.13);
+}
+
+
+/* =========================================================
+   VERIFY BUTTON
+========================================================= */
+
+.verify-box button {
+  width: 100%;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #3b7a78;
+
+  color: #ffffff;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.verify-box button:hover {
+  background: #2f6563;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 7px 18px rgba(59, 122, 120, 0.16);
+}
+
+.verify-box button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   RESEND BUTTON
+========================================================= */
+
+.resend-button {
+  margin-top: 15px;
+
+  background: #f7f5f0 !important;
+
+  border: 1px solid #e3ded5 !important;
+
+  color: #243447 !important;
+
+  box-shadow: none !important;
+}
+
+.resend-button:hover {
+  background: #e7f1ef !important;
+
+  border-color: #c9dfdc !important;
+
+  color: #3b7a78 !important;
+
+  box-shadow: none !important;
+}
+
+
+/* =========================================================
+   ERROR MESSAGE
+========================================================= */
+
+.error-message {
+  color: #b85c5c;
+
+  background: #f8eeee;
+
+  border: 1px solid #e5c8c8;
+
+  border-radius: 8px;
+
+  padding: 9px 12px;
+
+  font-size: 14px;
+
+  margin: 0;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   SUCCESS MESSAGE
+========================================================= */
+
+.success-message {
+  color: #5f8068;
+
+  background: #eaf3ef;
+
+  border: 1px solid #c9ddd3;
+
+  border-radius: 8px;
+
+  padding: 9px 12px;
+
+  font-size: 14px;
+
+  margin: 0;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   LOGIN LINK
+========================================================= */
+
+.login-link {
+  color: #6b7280;
+
+  margin-top: 25px;
+
+  font-size: 14px;
+}
+
+.login-link span {
+  color: #3b7a78;
+
+  cursor: pointer;
+
+  font-weight: 700;
+}
+
+.login-link span:hover {
+  color: #2f6563;
+
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+  .verify-page {
+    padding: 18px;
+  }
+
+  .verify-box {
+    padding: 32px 22px;
+
+    border-radius: 16px;
+  }
+
+  .verify-box h1 {
+    font-size: 25px;
+  }
+
+  .verify-text {
+    font-size: 13px;
+  }
+
+  .verify-email {
+    font-size: 13px;
+
+    margin-bottom: 22px;
+  }
+
+  .verify-box input {
+    padding: 13px;
+
+    font-size: 18px;
+
+    letter-spacing: 5px;
+  }
+
+  .verify-box button {
+    padding: 13px;
+
+    font-size: 15px;
+  }
+
+  .login-link {
+    font-size: 13px;
+
+    margin-top: 21px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 350px) {
+
+  .verify-page {
+    padding: 12px;
+  }
+
+  .verify-box {
+    padding: 28px 17px;
+  }
+
+  .verify-box h1 {
+    font-size: 23px;
+  }
+
+  .verify-box input {
+    font-size: 17px;
+
+    letter-spacing: 4px;
+  }
+}

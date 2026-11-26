@@ -1,0 +1,622 @@
+/* =========================================================
+   SKILLSWAP - ADMIN USERS
+   WARM WHITE / NAVY / TEAL THEME
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.admin-users-page {
+  width: min(1100px, 92%);
+  min-height: calc(100vh - 150px);
+  margin: 0 auto;
+  padding: 35px 0 70px;
+
+  color: #263238;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.admin-users-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.admin-users-header h1 {
+  margin: 0 0 9px;
+
+  color: #243447;
+
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.admin-users-header p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   MAIN BOX
+   ========================================================= */
+
+.admin-users-box {
+  width: 100%;
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3ded5;
+  border-radius: 20px;
+
+  box-shadow:
+    0 18px 45px rgba(36, 52, 71, 0.10);
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.admin-users-title {
+  margin: 0 0 24px;
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid #e3ded5;
+
+  color: #243447;
+
+  font-size: 22px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   USERS LIST
+   ========================================================= */
+
+.admin-users-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+
+/* =========================================================
+   USER ITEM
+   ========================================================= */
+
+.admin-user-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 20px;
+
+  background: #fdfcf9;
+
+  border: 1px solid #e3ded5;
+
+  border-radius: 16px;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admin-user-item:hover {
+  transform: translateY(-2px);
+
+  border-color: #c9dfdc;
+
+  box-shadow:
+    0 10px 28px rgba(36, 52, 71, 0.10);
+}
+
+
+/* =========================================================
+   USER AVATAR
+   ========================================================= */
+
+.admin-user-avatar {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 1px solid #c9dfdc;
+
+  border-radius: 50%;
+
+  background: #e7f1ef;
+
+  color: #3b7a78;
+
+  font-size: 24px;
+
+  box-shadow:
+    0 5px 18px rgba(36, 52, 71, 0.08);
+}
+
+
+/* =========================================================
+   USER INFORMATION
+   ========================================================= */
+
+.admin-user-info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.admin-user-info h3 {
+  margin: 0 0 9px;
+
+  color: #243447;
+
+  font-size: 19px;
+  font-weight: 800;
+
+  overflow-wrap: anywhere;
+}
+
+.admin-user-info p {
+  margin: 5px 0;
+
+  color: #6b7280;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+}
+
+.admin-user-info p strong {
+  color: #263238;
+}
+
+
+/* =========================================================
+   STATUS ROW
+   ========================================================= */
+
+.admin-user-status-row {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 10px;
+
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+.admin-user-status-row > strong {
+  color: #263238;
+}
+
+
+/* =========================================================
+   STATUS BADGES
+   ========================================================= */
+
+.admin-user-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 5px 11px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   ACTIVE
+   ========================================================= */
+
+.admin-user-status.active {
+  border: 1px solid #c9ddd3;
+
+  background: #eaf3ef;
+
+  color: #5f8068;
+}
+
+
+/* =========================================================
+   BANNED
+   ========================================================= */
+
+.admin-user-status.banned {
+  border: 1px solid #e5c8c8;
+
+  background: #f8eeee;
+
+  color: #b85c5c;
+}
+
+
+/* =========================================================
+   ACTION
+   ========================================================= */
+
+.admin-user-action {
+  width: 120px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.admin-user-btn {
+  width: 100%;
+
+  min-height: 42px;
+
+  padding: 0 12px;
+
+  border-radius: 9px;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+
+/* =========================================================
+   BAN BUTTON
+   ========================================================= */
+
+.admin-user-btn.ban {
+  border: 1px solid #e5c8c8;
+
+  background: #f8eeee;
+
+  color: #b85c5c;
+}
+
+.admin-user-btn.ban:hover {
+  transform: translateY(-2px);
+
+  background: #f3dfdf;
+
+  border-color: #d9b1b1;
+
+  box-shadow:
+    0 7px 18px rgba(184, 92, 92, 0.10);
+}
+
+
+/* =========================================================
+   UNBAN BUTTON
+   ========================================================= */
+
+.admin-user-btn.unban {
+  border: 1px solid #c9ddd3;
+
+  background: #eaf3ef;
+
+  color: #5f8068;
+}
+
+.admin-user-btn.unban:hover {
+  transform: translateY(-2px);
+
+  background: #dcece4;
+
+  border-color: #a9c8b5;
+
+  box-shadow:
+    0 7px 18px rgba(95, 128, 104, 0.10);
+}
+
+.admin-user-btn:active {
+  transform: scale(0.97);
+}
+
+
+/* =========================================================
+   EMPTY
+   ========================================================= */
+
+.admin-users-empty {
+  min-height: 230px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 25px;
+
+  text-align: center;
+}
+
+.admin-users-empty span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-size: 42px;
+
+  line-height: 1;
+}
+
+.admin-users-empty h3 {
+  margin: 0 0 7px;
+
+  color: #243447;
+
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.admin-users-empty p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.admin-users-loading {
+  min-height: 55vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+.admin-users-loading-icon {
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 16px;
+
+  border: 1px solid #c9dfdc;
+
+  border-radius: 50%;
+
+  background: #e7f1ef;
+
+  color: #3b7a78;
+
+  font-size: 30px;
+
+  animation: adminUsersPulse 1.5s ease-in-out infinite;
+}
+
+.admin-users-loading h2 {
+  margin: 0 0 7px;
+
+  color: #243447;
+
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.admin-users-loading p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   LOADING ANIMATION
+   ========================================================= */
+
+@keyframes adminUsersPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.admin-user-btn:focus-visible {
+  outline: 2px solid #3b7a78;
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+  .admin-users-page {
+    width: 94%;
+
+    padding: 35px 0 75px;
+  }
+
+  .admin-users-header h1 {
+    font-size: 29px;
+  }
+
+  .admin-users-box {
+    padding: 21px;
+  }
+
+  .admin-user-item {
+    align-items: flex-start;
+  }
+
+  .admin-user-action {
+    width: 125px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+  .admin-users-page {
+    width: 94%;
+
+    padding: 28px 0 60px;
+  }
+
+  .admin-users-header {
+    margin-bottom: 22px;
+  }
+
+  .admin-users-header h1 {
+    font-size: 25px;
+  }
+
+  .admin-users-header p {
+    font-size: 13px;
+  }
+
+  .admin-users-box {
+    padding: 17px;
+
+    border-radius: 16px;
+  }
+
+  .admin-users-title {
+    margin-bottom: 19px;
+
+    font-size: 19px;
+  }
+
+  .admin-user-item {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    padding: 17px;
+
+    gap: 14px;
+
+    border-radius: 13px;
+  }
+
+  .admin-user-avatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .admin-user-info h3 {
+    font-size: 18px;
+  }
+
+  .admin-user-action {
+    width: 100%;
+  }
+
+  .admin-user-btn {
+    min-height: 44px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .admin-users-box {
+    padding: 13px;
+  }
+
+  .admin-user-item {
+    padding: 13px;
+  }
+
+  .admin-users-header h1 {
+    font-size: 22px;
+  }
+
+  .admin-users-title {
+    font-size: 17px;
+  }
+
+  .admin-user-info p {
+    font-size: 12px;
+  }
+}
